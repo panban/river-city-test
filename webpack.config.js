@@ -6,7 +6,7 @@ const validate = require('webpack-validator');
 
 let nodeModulesDirectories = path.join(__dirname, 'node_modules');
 let modulesDirectories = [nodeModulesDirectories];
-let inputPath = path.join(__dirname, './source/js/');
+let inputPath = path.join(__dirname, './source/app/');
 
 let plugins = [
 
@@ -27,7 +27,7 @@ let loaders = [
 
   {
     test: /\.js$/,
-    include: path.join(__dirname, 'source/js'),
+    include: path.join(__dirname, 'source/app'),
     loader: 'babel',
     query: {
       presets: ['es2015'],
@@ -47,7 +47,7 @@ if (!$.dev) {
 
 let webpackConfig = {
 
-    context: path.resolve(__dirname, 'source/js'),
+    context: path.resolve(__dirname, 'source/app'),
 
     entry: {
       app: './app.js',

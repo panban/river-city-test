@@ -59,10 +59,8 @@ class ExplorerViewer {
   }
 }
 
-var templateUrl = require('./node-explorer.template.html');
 angular.module('vfs').component('vfsNodeExplorer', {
   controller: ExplorerViewer,
-  templateUrl: templateUrl,
   bindings: {
     vfsNode: '<'
   }
