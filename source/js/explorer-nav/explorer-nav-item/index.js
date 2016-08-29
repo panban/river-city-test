@@ -1,0 +1,1 @@
+require('./explorer-nav-item.component.js');

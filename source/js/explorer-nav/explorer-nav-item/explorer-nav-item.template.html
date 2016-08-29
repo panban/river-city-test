@@ -1,0 +1,14 @@
+<div ng-class="{'is-open': $ctrl.isOpen($ctrl.node)}"
+     class="explorer-nav_item">
+  <a ng-click="$ctrl.openNode($ctrl.node)"
+     ng-style="{'padding-left': $ctrl.padding()}"
+     class="explorer-nav_link">
+    <i class="icon" ng-class="::$ctrl.icon($ctrl.node)"></i>
+    <span ng-bind="::$ctrl.node.title"></span>
+  </a>
+
+  <vfs-explorer-nav-item ng-repeat="child in $ctrl.node.children"
+                         node="child"
+                         depth="$ctrl.depth">
+  </vfs-explorer-nav-item>
+</div>

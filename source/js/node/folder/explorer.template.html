@@ -1,0 +1,43 @@
+<div class="explorer">
+  <header class="explorer_header">
+    <div class="explorer_header-base">
+      <h2 ng-bind="$ctrl.node.title"
+          class="explorer_header-title"></h2>
+    </div>
+    <div class="explorer_header-side">
+      <a href="#"
+         title="Delete folder"
+         class="explorer_header-btn"
+         ng-click="$ctrl.onDeleteFolder($event)">
+        <i class="icon icon-delete"></i>
+      </a>
+    </div>
+  </header>
+
+  <div class="explorer_meta">
+    <span class="explorer_meta-item" ng-bind="$ctrl.folderSize"></span>
+    <span class="explorer_meta-item">folders: <span ng-bind="$ctrl.countFolders"></span></span>
+    <span class="explorer_meta-item">files: <span ng-bind="$ctrl.countFiles"></span></span>
+  </div>
+
+  <div class="explorer_content">
+    <ul class="explorer_tools">
+      <li class="explorer_tools-item">
+        <a href="#"
+           class="explorer_tools-link"
+           ng-click="$ctrl.onCreateFolder($event)">
+          <i class="icon icon-folder-m"></i>
+          <span class="explorer_tools-text">Create folder</span>
+        </a>
+      </li>
+      <li class="explorer_tools-item">
+        <a href="#"
+           class="explorer_tools-link"
+           ng-click="$ctrl.onCreateFile($event)">
+          <i class="icon icon-file-m"></i>
+          <span class="explorer_tools-text">Create file</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

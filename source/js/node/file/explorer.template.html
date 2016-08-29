@@ -1,0 +1,31 @@
+<div>
+  <header class="explorer_header">
+    <div class="explorer_header-base">
+      <h2 ng-bind="$ctrl.node.title"
+          class="explorer_header-title"></h2>
+    </div>
+    <div class="explorer_header-side">
+      <a href="#"
+         title="Save file"
+         class="explorer_header-btn"
+         ng-click="$ctrl.onSaveFile($event)">
+        <i class="icon icon-save"></i>
+      </a>
+      <a href="#"
+         title="Delete file"
+         class="explorer_header-btn"
+         ng-click="$ctrl.onDeleteFile($event)">
+        <i class="icon icon-delete"></i>
+      </a>
+    </div>
+  </header>
+
+  <div class="explorer_meta">
+    <span class="explorer_meta-item" ng-bind="$ctrl.fileSize"></span>
+  </div>
+
+  <div class="explorer_content">
+    <textarea class="editor"
+              ng-model="$ctrl.node.content"></textarea>
+  </div>
+</div>

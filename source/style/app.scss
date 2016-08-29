@@ -1,0 +1,213 @@
+// ------------------------------------------
+// Util
+//-------------------------------------------
+
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/placeholders';
+@import 'utils/functions';
+
+
+// ------------------------------------------
+// Base
+//-------------------------------------------
+
+@import 'base/reset';
+@import 'base/base';
+@import 'base/fonts';
+
+
+// ------------------------------------------
+// Layout
+// ------------------------------------------
+
+@import 'layout/tools';
+
+
+// ------------------------------------------
+// Common
+// ------------------------------------------
+
+@import 'common/icon';
+
+
+.vfs {
+  display: flex;
+  height: 100%;
+
+  &_side {
+    display: flex;
+    overflow-y: auto;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 300px;
+    background: $color-stone;
+  }
+
+  &_base {
+    flex: 1;
+    padding: 30px;
+  }
+}
+
+.explorer {
+
+  &_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  &_header-base {
+    flex-grow: 1;
+    padding-right: 20px;
+  }
+
+  &_header-side {
+    flex-shrink: 0;
+  }
+
+  &_header-title {
+    @extend %text-ellipsis;
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+
+  &_header-btn {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover .icon-delete {
+      @extend %icon-delete-hover;
+    }
+
+    &:hover .icon-save {
+      @extend %icon-save-hover;
+    }
+
+    .icon-save {
+      margin-top: 1px;
+    }
+  }
+
+  &_meta {
+    color: $color-wall;
+  }
+
+  &_meta-item {
+    padding-right: 4px;
+
+    &:after {
+      content: ',';
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &:last-child:after {
+      content: '';
+    }
+  }
+
+  &_content {
+    margin-top: 50px;
+  }
+
+  &_tools {
+    display: flex;
+    align-items: center;
+    max-width: 700px;
+    margin: auto;
+  }
+
+  &_tools-item {
+    text-align: center;
+    flex: 0 0 50%;
+  }
+
+  &_tools-link {
+    width: 150px;
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: $color-lapis;
+
+    &:hover {
+      color: $color-canary;
+    }
+
+    &:hover .icon-folder-m {
+      @extend %icon-folder-m-hover;
+    }
+
+    &:hover .icon-file-m {
+      @extend %icon-file-m-hover;
+    }
+  }
+
+  &_tools-text {
+    display: block;
+    margin-top: 8px;
+  }
+}
+
+.explorer-nav {
+  display: flex;
+  padding: 30px 0;
+
+  &_item {
+    color: $color-wall;
+
+    &.is-open > .explorer-nav_link {
+      background: #157efb;
+      color: #fff;
+    }
+
+    &.is-open > .explorer-nav_link .icon-folder-s {
+      @extend %icon-folder-s-hover;
+    }
+
+    &.is-open > .explorer-nav_link .icon-file-s {
+      @extend %icon-file-s-hover;
+    }
+  }
+
+  &_item-wrap {
+    flex: 1;
+  }
+
+  &_link {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    line-height: 1.4;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  &_link .icon {
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+}
+
+.editor {
+  height: 400px;
+  width: 100%;
+  border: 1px solid $color-slate;
+  padding: 10px;
+  resize: none;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  outline: none;
+
+  &:focus {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),0 0 8px rgba(102, 175, 233, 0.6);
+    border-color: lighten($color-lapis, 20%);
+  }
+}

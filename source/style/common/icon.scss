@@ -1,0 +1,65 @@
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background: url('/assets/img/icons.png') no-repeat;
+}
+
+.icon-delete {
+  width: 21px;
+  height: 27px;
+  background-position: -1px -178px;
+}
+
+%icon-delete-hover {
+  background-position: -22px -178px;
+}
+
+.icon-save {
+  width: 26px;
+  height: 27px;
+  background-position: -1px -151px;
+}
+
+%icon-save-hover {
+  background-position: -27px -151px;
+}
+
+.icon-folder-m {
+  width: 96px;
+  height: 73px;
+  background-position: -1px 0;
+}
+
+%icon-folder-m-hover {
+  background-position: -97px 0;
+}
+
+.icon-folder-s {
+  width: 26px;
+  height: 19px;
+  background-position: -1px -224px;
+}
+
+%icon-folder-s-hover {
+  background-position: -27px -224px;
+}
+
+.icon-file-m {
+  width: 60px;
+  height: 77px;
+  background-position: -1px -73px;
+}
+
+%icon-file-m-hover {
+  background-position: -61px -73px;
+}
+
+.icon-file-s {
+  width: 14px;
+  height: 18px;
+  background-position: -1px -244px;
+}
+
+%icon-file-s-hover {
+  background-position: -15px -244px;
+}
